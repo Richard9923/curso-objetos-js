@@ -15,7 +15,6 @@ const cliente = {
     
 }
 
-// console.log(cliente);
 // console.log(cliente.nome, cliente.idade);
 
 cliente.enderecos = [
@@ -30,13 +29,16 @@ cliente.enderecos = [
 ]
 
 
-
-
-// console.log(Object.keys(cliente));
-
-for (chave in cliente) {
-    console.log(cliente[chave]);
+const frase = {
+    motivacao: "Motive e sera motivador",
+    inspiracao: "Se inpire no ser inspirado",
 }
 
+// console.log(frase);
+// console.log(Object.keys(cliente));
 
 
+const clienteMotivacao = {...cliente, ...frase};
+console.log(clienteMotivacao);
+
+Object.keys(clienteMotivacao)
